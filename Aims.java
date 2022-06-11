@@ -45,7 +45,6 @@ public class Aims {
                     CompactDisc cd1 = new CompactDisc("Van Quang Long 1", "Music", 100.44f, "Van Quang Long", 150,
                             "Van Quang Long", tracks);
                     anOrder.addMedia(cd1);
-                    // abcxyz
                 } else
                     System.out.println("Can't add this item in Order");
             } else if (myChoose == 3) {
@@ -61,5 +60,10 @@ public class Aims {
             } else
                 break;
         }
+
+        Thread thread = new Thread(new MemoryDaemon());
+        thread.setDaemon(true);
+        thread.start();
+        // md.run();
     }
 }
