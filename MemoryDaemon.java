@@ -9,7 +9,6 @@ public class MemoryDaemon implements Runnable {
         while (true) {
             used = rt.totalMemory() - rt.freeMemory();
             if (used != memoryUsed) {
-                System.out.println(rt.totalMemory()+" "+rt.freeMemory());
                 System.out.println("\tMemory used=" + used);
                 memoryUsed = used;
             }

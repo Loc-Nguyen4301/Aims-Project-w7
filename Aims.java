@@ -64,6 +64,6 @@ public class Aims {
         Thread thread = new Thread(new MemoryDaemon());
         thread.setDaemon(true);
         thread.start();
-        // md.run();
+        thread.run();
     }
 }
